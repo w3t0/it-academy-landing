@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - IT Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Яндекс.Метрика -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+        ym(YOUR_COUNTER_ID, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/YOUR_COUNTER_ID" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Яндекс.Метрика -->
+</head>
+<body>
+    <!-- Навигация -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">IT Academy</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="courses.html">Курсы</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+                <button class="cta-button" onclick="scrollToForm()">Записаться</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Хедер страницы -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Свяжитесь с нами</h1>
+            <p>Мы всегда готовы ответить на ваши вопросы</p>
+        </div>
+    </section>
+
+    <!-- Контактная информация и форма -->
+    <section class="contacts-section">
+        <div class="container">
+            <div class="contacts-grid">
+                <!-- Контактная информация -->
+                <div class="contact-info">
+                    <h2>Наши контакты</h2>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Адрес</h3>
+                            <p>ul. Krakowska 123<br>35-111 Rzeszów, Polska</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Телефон</h3>
+                            <p> +7 8 23 456 789</p>
+                            <p class="contact-note">Пн-Пт: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@itacademy.pl</p>
+                            <p>support@itacademy.pl</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h3>Социальные сети</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link">Facebook</a>
+                                <a href="#" class="social-link">Instagram</a>
+                                <a href="#" class="social-link">LinkedIn</a>
+                                <a href="#" class="social-link">Telegram</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="office-hours">
+                        <h3>Часы работы офиса</h3>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Понедельник - Пятница</td>
+                                <td>9:00 - 20:00</td>
+                            </tr>
+                            <tr>
+                                <td>Суббота</td>
+                                <td>10:00 - 16:00</td>
+                            </tr>
+                            <tr>
+                                <td>Воскресенье</td>
+                                <td>Выходной</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Форма обратной связи -->
+                <div class="contact-form-wrapper">
+                    <h2>Напишите нам</h2>
+                    <p class="form-description">Заполните форму и мы свяжемся с вами в ближайшее время</p>
+                    <form id="contactFormPage" onsubmit="handleContactForm(event)">
+                        <div class="form-group">
+                            <label for="contact-name">Ваше имя *</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Введите ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email *</label>
+                            <input type="email" id="contact-email" name="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Телефон *</label>
+                            <input type="tel" id="contact-phone" name="phone" placeholder=" +7 8 23 456 789" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Тема обращения *</label>
+                            <select id="contact-subject" name="subject" required>
+                                <option value="">Выберите тему</option>
+                                <option value="course-info">Информация о курсах</option>
+                                <option value="enrollment">Запись на обучение</option>
+                                <option value="payment">Вопросы по оплате</option>
+                                <option value="technical">Технические вопросы</option>
+                                <option value="partnership">Сотрудничество</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Сообщение *</label>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="Опишите ваш вопрос или пожелание..." required></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="privacy" required>
+                                <span>Я согласен с <a href="#">политикой конфиденциальности</a></span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ секция -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Нужен ли опыт программирования?</h3>
+                    <p>Нет, большинство наших курсов рассчитаны на обучение с нуля. Вам понадобится только желание учиться и компьютер.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Какой формат обучения?</h3>
+                    <p>Мы предлагаем как онлайн, так и офлайн формат. Занятия проходят вечером 2-3 раза в неделю, чтобы вы могли совмещать с работой.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Есть ли рассрочка оплаты?</h3>
+                    <p>Да, мы предоставляем беспроцентную рассрочку на весь период обучения. Также возможна оплата материнским капиталом.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Помогаете ли с трудоустройством?</h3>
+                    <p>Да, у нас есть карьерный центр. Мы помогаем с резюме, подготовкой к собеседованиям и подбором вакансий у наших партнеров.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Выдается ли сертификат?</h3>
+                    <p>По окончании курса вы получаете сертификат установленного образца и портфолио с реальными проектами.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Можно ли попробовать перед покупкой?</h3>
+                    <p>Да, первое занятие бесплатно! Вы можете посетить его, познакомиться с преподавателем и программой обучения.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Карта (опционально - можно добавить Google Maps позже) -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Как нас найти</h2>
+            <div class="map-placeholder">
+                <p>🗺️ Карта офиса</p>
+                <p class="map-note">Мы находимся в центре Жешува, рядом со станцией</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>IT Academy</h4>
+                    <p>Образовательная платформа для будущих IT-специалистов</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="courses.html">Курсы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Email: info@itacademy.pl</p>
+                    <p>Телефон:  +7 8 23 456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 IT Academy. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

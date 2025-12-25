@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Academy - Курсы программирования</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; // eslint-disable-line no-param-reassign
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106026932', 'ym');
+
+        ym(106026932, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/106026932" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+    <!-- Навигация -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">IT Academy</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="courses.html">Курсы</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <button class="cta-button" onclick="scrollToForm()">Записаться</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Станьте <span class="highlight">IT-специалистом</span> с нуля за 6 месяцев</h1>
+                <p class="hero-subtitle">Практические курсы программирования с гарантией трудоустройства</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToForm()">Начать обучение</button>
+                    <a href="courses.html" class="btn-secondary">Смотреть курсы</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">2500+</div>
+                        <div class="stat-label">выпускников</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">трудоустройство</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">направлений</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h3>Гарантия трудоустройства</h3>
+                    <p>Помогаем с резюме, портфолио и подготовкой к собеседованиям</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👨‍💻</div>
+                    <h3>Практический подход</h3>
+                    <p>80% времени - реальные проекты и задачи из индустрии</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>Опытные менторы</h3>
+                    <p>Преподаватели из ведущих IT-компаний с опытом 5+ лет</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⏰</div>
+                    <h3>Гибкий график</h3>
+                    <p>Вечерние группы и занятия онлайн для работающих</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные курсы -->
+    <section class="popular-courses">
+        <div class="container">
+            <h2 class="section-title">Популярные направления</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-tag">Хит</div>
+                    <h3>Frontend разработка</h3>
+                    <p>HTML, CSS, JavaScript, React</p>
+                    <div class="course-info">
+                        <span>⏱ 6 месяцев</span>
+                        <span>📍 Онлайн/Офлайн</span>
+                    </div>
+                    <div class="course-price">от 850  руб/мес</div>
+                    <a href="courses.html#frontend" class="btn-course">Подробнее</a>
+                </div>
+                <div class="course-card">
+                    <div class="course-tag">Популярно</div>
+                    <h3>Backend разработка</h3>
+                    <p>Node.js, Python, Базы данных</p>
+                    <div class="course-info">
+                        <span>⏱ 6 месяцев</span>
+                        <span>📍 Онлайн/Офлайн</span>
+                    </div>
+                    <div class="course-price">от 900  руб/мес</div>
+                    <a href="courses.html#backend" class="btn-course">Подробнее</a>
+                </div>
+                <div class="course-card">
+                    <h3>Fullstack разработка</h3>
+                    <p>React, Node.js, PostgreSQL</p>
+                    <div class="course-info">
+                        <span>⏱ 9 месяцев</span>
+                        <span>📍 Онлайн/Офлайн</span>
+                    </div>
+                    <div class="course-price">от 950  руб/мес</div>
+                    <a href="courses.html#fullstack" class="btn-course">Подробнее</a>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 30px;">
+                <a href="courses.html" class="btn-secondary">Все курсы</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма записи -->
+    <section class="enrollment-form" id="enrollment">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2>Запишитесь на бесплатную консультацию</h2>
+                <p>Оставьте заявку и наш менеджер свяжется с вами в течение часа</p>
+                <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="course" name="course" required>
+                            <option value="">Выберите направление</option>
+                            <option value="frontend">Frontend разработка</option>
+                            <option value="backend">Backend разработка</option>
+                            <option value="fullstack">Fullstack разработка</option>
+                            <option value="mobile">Mobile разработка</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary btn-submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>IT Academy</h4>
+                    <p>Образовательная платформа для будущих IT-специалистов</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="courses.html">Курсы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Email: info@itacademy.pl</p>
+                    <p>Телефон:  +7 8 23 456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 IT Academy. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

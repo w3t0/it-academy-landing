@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши курсы - IT Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Яндекс.Метрика -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+        ym(YOUR_COUNTER_ID, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/YOUR_COUNTER_ID" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Яндекс.Метрика -->
+</head>
+<body>
+    <!-- Навигация -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">IT Academy</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="courses.html" class="active">Курсы</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <button class="cta-button" onclick="window.location.href='index.html#enrollment'">Записаться</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Хедер страницы -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Наши курсы программирования</h1>
+            <p>Выберите направление и начните карьеру в IT</p>
+        </div>
+    </section>
+
+    <!-- Фильтры -->
+    <section class="filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterCourses('all')">Все курсы</button>
+                <button class="filter-btn" onclick="filterCourses('web')">Web разработка</button>
+                <button class="filter-btn" onclick="filterCourses('mobile')">Mobile</button>
+                <button class="filter-btn" onclick="filterCourses('data')">Data Science</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Список курсов -->
+    <section class="courses-section">
+        <div class="container">
+            <!-- Web разработка -->
+            <div class="course-detailed web" id="frontend">
+                <div class="course-header">
+                    <h2>Frontend разработка</h2>
+                    <div class="course-badge">Самый популярный</div>
+                </div>
+                <div class="course-content">
+                    <div class="course-description">
+                        <p><strong>Научитесь создавать современные веб-интерфейсы с нуля</strong></p>
+                        <p>Этот курс идеально подходит для начинающих. Вы освоите HTML, CSS, JavaScript и React - технологии, которые используют крупнейшие компании мира.</p>
+                        
+                        <h3>Что вы изучите:</h3>
+                        <ul>
+                            <li>HTML5 и семантическая верстка</li>
+                            <li>CSS3, Flexbox, Grid, анимации</li>
+                            <li>JavaScript ES6+, асинхронность</li>
+                            <li>React, hooks, state management</li>
+                            <li>TypeScript основы</li>
+                            <li>Работа с API и REST</li>
+                            <li>Git и GitHub</li>
+                        </ul>
+
+                        <h3>Ваши проекты:</h3>
+                        <ul>
+                            <li>Лендинг компании</li>
+                            <li>TODO приложение на React</li>
+                            <li>Интернет-магазин с корзиной</li>
+                            <li>Социальная сеть (дипломный проект)</li>
+                        </ul>
+                    </div>
+                    <div class="course-sidebar">
+                        <div class="course-info-box">
+                            <div class="info-item">
+                                <span class="info-label">Длительность:</span>
+                                <span class="info-value">6 месяцев</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Формат:</span>
+                                <span class="info-value">Онлайн/Офлайн</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Занятия:</span>
+                                <span class="info-value">2 раза в неделю</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Уровень:</span>
+                                <span class="info-value">С нуля</span>
+                            </div>
+                            <div class="price-box">
+                                <div class="price">от 850  руб/мес</div>
+                                <div class="price-note">рассрочка 6 месяцев</div>
+                            </div>
+                            <button class="btn-primary btn-enroll" onclick="enrollCourse('Frontend')">Записаться на курс</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend разработка -->
+            <div class="course-detailed web" id="backend">
+                <div class="course-header">
+                    <h2>Backend разработка</h2>
+                    <div class="course-badge badge-popular">Популярный</div>
+                </div>
+                <div class="course-content">
+                    <div class="course-description">
+                        <p><strong>Станьте серверным разработчиком и создавайте мощные API</strong></p>
+                        <p>Изучите Node.js и Python, освоите работу с базами данных и научитесь строить масштабируемые серверные приложения.</p>
+                        
+                        <h3>Что вы изучите:</h3>
+                        <ul>
+                            <li>Node.js и Express.js</li>
+                            <li>Python и Django/Flask</li>
+                            <li>SQL (PostgreSQL) и NoSQL (MongoDB)</li>
+                            <li>RESTful API и GraphQL</li>
+                            <li>Аутентификация и авторизация</li>
+                            <li>Docker и контейнеризация</li>
+                            <li>Деплой и DevOps основы</li>
+                        </ul>
+
+                        <h3>Ваши проекты:</h3>
+                        <ul>
+                            <li>REST API для блога</li>
+                            <li>Чат-приложение с WebSocket</li>
+                            <li>E-commerce платформа (backend)</li>
+                            <li>Микросервисная архитектура</li>
+                        </ul>
+                    </div>
+                    <div class="course-sidebar">
+                        <div class="course-info-box">
+                            <div class="info-item">
+                                <span class="info-label">Длительность:</span>
+                                <span class="info-value">6 месяцев</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Формат:</span>
+                                <span class="info-value">Онлайн/Офлайн</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Занятия:</span>
+                                <span class="info-value">2 раза в неделю</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Уровень:</span>
+                                <span class="info-value">Базовое программирование</span>
+                            </div>
+                            <div class="price-box">
+                                <div class="price">от 900  руб/мес</div>
+                                <div class="price-note">рассрочка 6 месяцев</div>
+                            </div>
+                            <button class="btn-primary btn-enroll" onclick="enrollCourse('Backend')">Записаться на курс</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fullstack разработка -->
+            <div class="course-detailed web" id="fullstack">
+                <div class="course-header">
+                    <h2>Fullstack разработка</h2>
+                    <div class="course-badge badge-premium">Premium</div>
+                </div>
+                <div class="course-content">
+                    <div class="course-description">
+                        <p><strong>Станьте универсальным разработчиком полного цикла</strong></p>
+                        <p>Самый полный курс: от верстки до деплоя. Вы научитесь создавать веб-приложения от начала до конца.</p>
+                        
+                        <h3>Что вы изучите:</h3>
+                        <ul>
+                            <li>Frontend: React, TypeScript, Next.js</li>
+                            <li>Backend: Node.js, Express, GraphQL</li>
+                            <li>Базы данных: PostgreSQL, Redis</li>
+                            <li>Архитектура приложений</li>
+                            <li>CI/CD, тестирование</li>
+                            <li>Cloud: AWS/Google Cloud</li>
+                            <li>Agile методологии</li>
+                        </ul>
+
+                        <h3>Ваши проекты:</h3>
+                        <ul>
+                            <li>Task-менеджер (Trello-подобный)</li>
+                            <li>Платформа онлайн-обучения</li>
+                            <li>Marketplace с оплатой</li>
+                            <li>Итоговый стартап-проект</li>
+                        </ul>
+                    </div>
+                    <div class="course-sidebar">
+                        <div class="course-info-box">
+                            <div class="info-item">
+                                <span class="info-label">Длительность:</span>
+                                <span class="info-value">9 месяцев</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Формат:</span>
+                                <span class="info-value">Онлайн/Офлайн</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Занятия:</span>
+                                <span class="info-value">3 раза в неделю</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Уровень:</span>
+                                <span class="info-value">С нуля</span>
+                            </div>
+                            <div class="price-box">
+                                <div class="price">от 950  руб/мес</div>
+                                <div class="price-note">рассрочка 9 месяцев</div>
+                            </div>
+                            <button class="btn-primary btn-enroll" onclick="enrollCourse('Fullstack')">Записаться на курс</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile разработка -->
+            <div class="course-detailed mobile" id="mobile">
+                <div class="course-header">
+                    <h2>Mobile разработка (React Native)</h2>
+                </div>
+                <div class="course-content">
+                    <div class="course-description">
+                        <p><strong>Создавайте мобильные приложения для iOS и Android</strong></p>
+                        <p>Изучите React Native и создавайте кросс-платформенные приложения с нативным интерфейсом.</p>
+                        
+                        <h3>Что вы изучите:</h3>
+                        <ul>
+                            <li>React Native основы</li>
+                            <li>Навигация в приложениях</li>
+                            <li>Работа с API и данными</li>
+                            <li>Push-уведомления</li>
+                            <li>Публикация в App Store и Google Play</li>
+                            <li>Нативные модули</li>
+                        </ul>
+                    </div>
+                    <div class="course-sidebar">
+                        <div class="course-info-box">
+                            <div class="info-item">
+                                <span class="info-label">Длительность:</span>
+                                <span class="info-value">5 месяцев</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Формат:</span>
+                                <span class="info-value">Онлайн</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Занятия:</span>
+                                <span class="info-value">2 раза в неделю</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Уровень:</span>
+                                <span class="info-value">Знание React</span>
+                            </div>
+                            <div class="price-box">
+                                <div class="price">от 800  руб/мес</div>
+                                <div class="price-note">рассрочка 5 месяцев</div>
+                            </div>
+                            <button class="btn-primary btn-enroll" onclick="enrollCourse('Mobile')">Записаться на курс</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Science -->
+            <div class="course-detailed data" id="data-science">
+                <div class="course-header">
+                    <h2>Data Science и Machine Learning</h2>
+                </div>
+                <div class="course-content">
+                    <div class="course-description">
+                        <p><strong>Станьте специалистом по анализу данных и машинному обучению</strong></p>
+                        <p>Освойте Python, библиотеки для работы с данными и создавайте ML-модели.</p>
+                        
+                        <h3>Что вы изучите:</h3>
+                        <ul>
+                            <li>Python для Data Science</li>
+                            <li>NumPy, Pandas, Matplotlib</li>
+                            <li>Статистика и математика для ML</li>
+                            <li>Scikit-learn, TensorFlow</li>
+                            <li>Обработка и визуализация данных</li>
+                            <li>Нейронные сети</li>
+                        </ul>
+                    </div>
+                    <div class="course-sidebar">
+                        <div class="course-info-box">
+                            <div class="info-item">
+                                <span class="info-label">Длительность:</span>
+                                <span class="info-value">8 месяцев</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Формат:</span>
+                                <span class="info-value">Онлайн</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Занятия:</span>
+                                <span class="info-value">2 раза в неделю</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Уровень:</span>
+                                <span class="info-value">Базовое программирование</span>
+                            </div>
+                            <div class="price-box">
+                                <div class="price">от 1000  руб/мес</div>
+                                <div class="price-note">рассрочка 8 месяцев</div>
+                            </div>
+                            <button class="btn-primary btn-enroll" onclick="enrollCourse('Data Science')">Записаться на курс</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>IT Academy</h4>
+                    <p>Образовательная платформа для будущих IT-специалистов</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="courses.html">Курсы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Email: info@itacademy.pl</p>
+                    <p>Телефон:  +7 8 23 456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 IT Academy. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
