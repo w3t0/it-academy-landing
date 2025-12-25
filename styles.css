@@ -1,4 +1,3 @@
-/* Базовые стили */
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +30,6 @@ body {
     padding: 0 20px;
 }
 
-/* Навигация */
 header {
     background: var(--bg-white);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -89,7 +87,6 @@ header {
     background: var(--primary-dark);
 }
 
-/* Hero секция */
 .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -175,7 +172,6 @@ header {
     opacity: 0.9;
 }
 
-/* Секции */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -183,7 +179,6 @@ header {
     color: var(--text-dark);
 }
 
-/* Преимущества */
 .benefits {
     padding: 80px 0;
     background: var(--bg-light);
@@ -222,7 +217,6 @@ header {
     color: var(--text-light);
 }
 
-/* Курсы */
 .popular-courses {
     padding: 80px 0;
 }
@@ -303,7 +297,6 @@ header {
     text-align: center;
 }
 
-/* Форма записи */
 .enrollment-form {
     padding: 80px 0;
     background: var(--bg-light);
@@ -364,7 +357,6 @@ header {
     font-size: 1.1rem;
 }
 
-/* Footer */
 footer {
     background: var(--text-dark);
     color: white;
@@ -408,7 +400,6 @@ footer {
     color: #9ca3af;
 }
 
-/* Страница курсов */
 .page-header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -426,7 +417,6 @@ footer {
     opacity: 0.9;
 }
 
-/* Фильтры */
 .filters {
     padding: 2rem 0;
     background: var(--bg-light);
@@ -456,7 +446,6 @@ footer {
     border-color: var(--primary-color);
 }
 
-/* Детальные курсы */
 .courses-section {
     padding: 3rem 0;
 }
@@ -567,7 +556,6 @@ footer {
     margin-top: 1rem;
 }
 
-/* Контакты */
 .contacts-section {
     padding: 3rem 0;
 }
@@ -680,7 +668,6 @@ footer {
     color: var(--primary-color);
 }
 
-/* FAQ */
 .faq-section {
     padding: 3rem 0;
     background: var(--bg-light);
@@ -707,7 +694,6 @@ footer {
     color: var(--text-light);
 }
 
-/* Карта */
 .map-section {
     padding: 3rem 0;
 }
@@ -728,7 +714,6 @@ footer {
     color: var(--text-light);
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2rem;
